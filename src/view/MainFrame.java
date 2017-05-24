@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 
 public class MainFrame extends JFrame {
 	private SSHPanel sshPanel;
+	private LoginPanel loginPanel;
 	
 	public MainFrame() {
 		super("Zustandsliste der Standorte"); //set Window name
@@ -15,7 +16,7 @@ public class MainFrame extends JFrame {
 		
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		
-		LoginPanel loginPanel = new LoginPanel();
+		loginPanel = new LoginPanel();
 		sshPanel = new SSHPanel(loginPanel);
 		
 		setLayout(new BorderLayout());

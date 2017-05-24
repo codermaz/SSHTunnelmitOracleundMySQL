@@ -6,12 +6,15 @@ import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 
 import view.LoginPanel;
+import view.SSHPanel;
 
 public class OracleKonfiguration implements ActionListener {
 	private LoginPanel loginPanel;
+	private SSHPanel sshPanel;
 
 	public OracleKonfiguration(JPanel loginPanel) {
 		this.loginPanel = (LoginPanel) loginPanel;
+		//this.sshPanel = loginPanel.getParent().getSshPane
 		configStrings();
 	}
 
@@ -24,9 +27,8 @@ public class OracleKonfiguration implements ActionListener {
 			nLocalPortOracle = 1521;
 		} else {
 			loginPanel.setServer("localhost:");
-			// local port number use to bind SSH tunnel // int nLocalPort =
-			// 3366;
 			nLocalPortOracle = 1033;
+			
 		}
 
 		loginPanel.setLocalPort(Integer.toString(nLocalPortOracle));

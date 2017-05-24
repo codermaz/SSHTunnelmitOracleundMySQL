@@ -36,7 +36,9 @@ public class LoginPanel extends JPanel {
 	
 	private JButton connectButton;
 	
+	
 	public LoginPanel() {
+		
 	    //Create the radio buttons for Oracle or MySQL
 	    oracleButton = new JRadioButton("OracleSQL");
 	    oracleButton.setMnemonic(KeyEvent.VK_O);
